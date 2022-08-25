@@ -3,17 +3,19 @@
 ## Authors
 
 - Ben Fraser, https://github.com/BenjaminFraser, B.Fraser@cranfield.ac.uk
-- Bian Tongfei, https://github.com/biantongfei, 
+- Tongfei, Bian https://github.com/biantongfei, 
 - Brendan Copp, https://github.com/bdvcp
 - Gurpreet Singh, Gurpreet.Singh.388@cranfield.ac.uk
 - Orhan Keyvan, https://github.com/CaptainSaturn
 - Valentin Sonntag, https://github.com/ValentinSonntag
 - Dr Yang Xing, Yang.X@cranfield.ac.uk
 
+Conference paper presented as part of the 2022 IEEE International Conference on Multisensor Fusion and Integration (MFI 2022), Cranfield University, United Kingdom.
 
-
+---
 *Centre for Autonomous and Cyber-Physical Systems*
 *School of Aerospace, Transport and Manufacturing, Cranfield University, United Kingdom*
+
 
 ## Introduction and Overview
 
