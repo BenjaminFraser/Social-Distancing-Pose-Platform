@@ -20,8 +20,7 @@ from flask import Flask, Response
 
 
 # set basic directories and filepaths for dashboard
-# PROJECT_DIR = os.getcwd()
-PROJECT_DIR = "C:\\Users\\Msi\\Desktop\\virtualenv_project"
+PROJECT_DIR = os.getcwd()
 DATA_DIR = os.path.join(PROJECT_DIR, 'static')
 
 # supported locations that can be chosen within the app
@@ -157,6 +156,13 @@ def load_chosen_area(value, plot_type):
                                  f"{value}_frame_results.JSON"))
     person_results = pd.read_json(os.path.join(area_dir, 
                                  f"{value}_person_results.JSON"))
+
+    # define box columns (data represented as lists) to convert to str
+    # else dash will raise an error when presenting the table in html
+    box_cols = ['bbox', 'mask_head_regions', 'keypoints', 
+                'confidences', 'position', 'mask_pred_probs']
+    for col in box_cols:
+        person_results[col] = person_results[col].astype(str)
 
     # reset index to use as col later
     frame_results = frame_results.reset_index()
@@ -298,7 +304,8 @@ def load_chosen_area(value, plot_type):
         sort_mode = 'multi',
         export_format="csv",
 
-        style_cell={'whiteSpace': 'normal', 
+        style_cell={
+                    #'whiteSpace': 'normal', 
                     'height': 'auto',
                     'textAlign': 'left'},
 
